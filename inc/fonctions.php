@@ -7,10 +7,14 @@ function debug($tab){
   echo '</pre>';
 }
 
-function getImage($table, $id){
+$filename = 'posters/' . $movieId. '.jpg';
+
+function getImage($table, $id, $file){
 	if(!empty($table)){
 		if($table['id'] == $id){
-			return '<div><img src="posters/".$id.".jpg"></div>'; 
+			
+			$nk = '<div><img src="'. $file.'"></div>';
+			return  $nk;
 		}
 	}
 }
