@@ -1,5 +1,4 @@
 <?php // connexion.php
-include('helper/db.php');
 session_start();
 include('helper/session.php');
 include('fonctions.php');
@@ -64,7 +63,7 @@ if(!empty($_POST['submitconnexion'])) {
 
 
 
-<?php include('inc/header.php'); ?>
+<?php include('headerFront.php'); ?>
 
 	<h1>Connexion</h1>
 
@@ -92,4 +91,4 @@ if(!empty($_POST['submitconnexion'])) {
 		<a href="passwordforget.php">Mot de passe perdu</a>
 
 
-<?php include('inc/footer.php'); ?>
+<?php include('footerFront.php'); ?>

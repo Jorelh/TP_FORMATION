@@ -8,6 +8,8 @@ include 'inc/headerFront.php';
 $movies = randomMovies();
 ?>
 
+
+
 <section class="wrapper">
 
 <?php
