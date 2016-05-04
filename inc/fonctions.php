@@ -7,6 +7,16 @@ function debug($tab){
   echo '</pre>';
 }
 
+function getImage($table, $id){
+	if(!empty($table)){
+		if($table['id'] == $id){
+			return '<div><img src="posters/".$id.".jpg"></div>'; 
+		}
+	}
+}
+
+
+
 //slug
 function slugify($text){
 
