@@ -1,7 +1,6 @@
 <?php // connexion.php
 session_start();
-include('helper/session.php');
-include('fonctions.php');
+include('inc/fonctions.php');
 $errors = array();
 $title = 'Connexion';
 if(!empty($_POST['submitconnexion'])) {
@@ -63,20 +62,20 @@ if(!empty($_POST['submitconnexion'])) {
 
 
 
-<?php include('headerFront.php'); ?>
+<?php include('inc/headerFront.php'); ?>
 
 	<h1>Connexion</h1>
 
 
 		<form method="POST" action="connexion.php" id="formconnexion">
 			<div class="form-group">
-				<label for="pseudo">Pseudo or email*</label>
+				<label for="pseudo">Pseudo ou email *</label>
 				<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
 				<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
 			</div>
 
 			<div class="form-group">
-				<label for="password">Password*</label>
+				<label for="password">Mot de passe *</label>
 				<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
 				<input type="text" name="password" id="password" class="form-control" value="<?php if(!empty($_POST['password'])) { echo $_POST['password']; } ?>" />
 			</div>
@@ -91,4 +90,4 @@ if(!empty($_POST['submitconnexion'])) {
 		<a href="passwordforget.php">Mot de passe perdu</a>
 
 
-<?php include('footerFront.php'); ?>
+<?php include('inc/footerFront.php'); ?>
