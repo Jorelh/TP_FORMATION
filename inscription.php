@@ -1,6 +1,5 @@
 <?php
-include('helper/db.php');
-include('helper/fonctions.php');
+include('inc/fonctions.php');
 $errors = array();
 $success = false;
 $title = 'Inscription';
@@ -37,7 +36,7 @@ if(!empty($_POST['submitinscription'])) {
             if($pseudoexist) {
              	$errors['pseudo'] = 'Ce pseudo existe déjà.';
             }
-    		
+
 	    }
 	// Error => email
 	    if(empty($email) || (filter_var($email, FILTER_VALIDATE_EMAIL)) === false) {
@@ -53,7 +52,7 @@ if(!empty($_POST['submitinscription'])) {
                 $smtp->bindValue(':email',$email);
                 $smtp->execute();
                 $resultmail = $smtp->fetch();
-                
+
                 if($resultmail) {
                    $errors['email'] = 'Cette adresse e-mail existe déjà.';
                 }
@@ -73,7 +72,7 @@ if(!empty($_POST['submitinscription'])) {
 
 	    	// autre method sha
 
-	    		// $salt = '1959aa30dfsbaboudjiohgaFGDfE$michel?RgviWEFW@#$milo@?@dajwewrIGO@#r2r'; 
+	    		// $salt = '1959aa30dfsbaboudjiohgaFGDfE$michel?RgviWEFW@#$milo@?@dajwewrIGO@#r2r';
 
     			// $passwordhashed = hash("sha256", $password1.$salt);
         // $passmd5 = md5($salt . $password);
@@ -98,7 +97,7 @@ if(!empty($_POST['submitinscription'])) {
 
 	    	// faire une connection +++
 	    }
-    
+
 
 
 }
@@ -108,8 +107,8 @@ if(!empty($_POST['submitinscription'])) {
 ?>
 
 
-<?php include('inc/header.php'); ?>
-	
+<?php include('inc/headerFront.php'); ?>
+
 	<h1>Inscription</h1>
 
 	<?php if($success) {
@@ -118,25 +117,25 @@ if(!empty($_POST['submitinscription'])) {
 
 		<form method="POST" action="inscription.php" id="forminscription">
 			<div class="form-group">
-				<label for="pseudo">Pseudo*</label>
+				<label for="pseudo">Pseudo *</label>
 				<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
 				<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
 			</div>
 
 			<div class="form-group">
-				<label for="email">Email*</label>
+				<label for="email">Email *</label>
 				<span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
 				<input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" />
 			</div>
 
 			<div class="form-group">
-				<label for="password1">Password*</label>
+				<label for="password1">Mot de passe *</label>
 				<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
 				<input type="text" name="password1" id="password1" class="form-control" value="<?php if(!empty($_POST['password1'])) { echo $_POST['password1']; } ?>" />
 			</div>
 
 			<div class="form-group">
-				<label for="password2">Repeat password*</label>
+				<label for="password2">Repeter le mot de passe *</label>
 				<input type="text" name="password2" id="password2" class="form-control" value="<?php if(!empty($_POST['password2'])) { echo $_POST['password2']; } ?>" />
 			</div>
 
@@ -144,4 +143,4 @@ if(!empty($_POST['submitinscription'])) {
 		</form>
 	<?php } ?>
 
-<?php include('inc/footer.php'); ?>
+<?php include('inc/footerFront.php'); ?>

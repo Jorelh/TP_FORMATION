@@ -2,10 +2,13 @@
 
 include 'inc/db.php';
 include 'inc/query.php';
+include 'inc/fonctions.php';
 include 'inc/headerFront.php';
 
 $movies = randomMovies();
 ?>
+
+
 
 <section class="wrapper">
 

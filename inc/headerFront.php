@@ -30,7 +30,7 @@
       </ul>
 
       <ul class="navright">
-        <li><a href="#">Connexion</a></li>
-        <li><a href="#">Inscription</a></li>
+        <li><a href="connexion.php">Connexion</a></li>
+        <li><a href="inscription.php">Inscription</a></li>
       </ul>
     </header>
