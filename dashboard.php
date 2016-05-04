@@ -2,24 +2,18 @@
 
 include 'inc/db.php';
 include 'inc/query.php';
-include 'inc/headerFront.php';
+include 'inc/headerBack.php';
 
 ?>
 
 <section class="wrapper">
 
 
-<?php
-
-
-
-?>
-
 
 
 </section>
 
 
-<?php
-include 'inc/footerFront.php';
-?>
+  <?php
+  include 'inc/footerBack.php';
+  ?>
