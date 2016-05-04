@@ -19,7 +19,7 @@ foreach ($movies as $movie) {
   if(file_exists($filename)){
     echo '<img height="310" width="220" src="posters/'.$movie['id'].'.jpg" alt="#" />';
   }else{
-    echo '<img height="310" width="220" src="posters/no-image.png" alt="#" />';
+    echo '<img height="310" width="220" src="posters/no-image.jpg" alt="#" />';
   }
   echo '<p>'.$movie['title'].'</p>';
   echo '</div>';
