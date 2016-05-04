@@ -7,7 +7,7 @@ function debug($tab){
   echo '</pre>';
 }
 
-$filename = 'posters/' . $movieId. '.jpg';
+$filename = 'posters/' . $_GET['id']. '.jpg';
 
 function getImage($table, $id, $file){
 	if(!empty($table)){
