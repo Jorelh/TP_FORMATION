@@ -14,7 +14,12 @@ $movies = randomMovies();
 foreach ($movies as $movie) {
   echo '<a href="details.php?id='.$movie['id'].'&title='.$movie['slug'].'" alt="#">';
   echo '<div class="thumbnail">';
-  echo '<img height="310" width="220" src="posters/'.$movie['id'].'.jpg" alt="#" />';
+
+  if(file_exists($movie['id'].'.jpg')){
+    echo '<img height="310" width="220" src="posters/'.$movie['id'].'.jpg" alt="#" />';
+  }else{
+    echo '<img height="310" width="220" src="posters/no-image.png" alt="#" />';
+  }
   echo '<p>'.$movie['title'].'</p>';
   echo '</div>';
   echo '</a>';
