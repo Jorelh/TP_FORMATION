@@ -14,6 +14,7 @@ if(!empty($_GET["id"])){
 	echo '<h1><a href="index.php">Retour à l\'index, aucun film choisi</a></h1>';
 	die();
 }
+
 debug($movieId);
 debug($movieDetails);
 
