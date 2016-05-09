@@ -29,6 +29,7 @@ a:hover{
 ul{
   display: inline-table;
   font-family: 'Raleway', sans-serif;
+  padding: 0;
 }
 
 li{
@@ -39,7 +40,7 @@ li{
   padding-right: 10px;
 }
 
-button{
+.buttonbig{
   padding: 1em 2.5em;
   margin: 20px;
   width: 1130px;
@@ -48,10 +49,15 @@ button{
   border-radius: 3px;
   border: none;
 
+  box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.5);
+
   transition: .3s;
 }
 
-button:hover{
+.buttonbig:hover{
+  cursor: pointer;
   background: white;
 }
 
@@ -59,6 +65,7 @@ button:hover{
 
 header{
   background: #263248;
+  padding: 1em 0;
 }
 
 header h1{
@@ -72,11 +79,41 @@ header h1{
 }
 
 .navsearch{
-  color: #FF9800;
+  border-top: 2px solid #10202F;
+  padding: 1em 0;
+  margin-top: 1em;
 }
 
-.dropdown{
-  
+.inputnav{
+  display: inline-block;
+  width: 225px;
+}
+
+.hide{
+  display: none;
+}
+
+.open{
+
+}
+
+.buttonsearch{
+  background: #FF9800;
+  border: none;
+  font-size: 1em;
+  padding: .5em 2em;
+  border-radius: 4px;
+
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+
+  transition: .3s;
+}
+
+.buttonsearch:hover{
+  background: white;
+  cursor: pointer;
 }
 
 
@@ -104,6 +141,30 @@ header h1{
 .thumbnail p{
   text-align: center;
   width: 220px;
+}
+
+
+/* Formulaires de connexion et inscription */
+
+#formconnexion, #forminscription{
+  margin: 20px;
+  padding: 20px;
+  background: #263248;
+}
+
+form h1{
+  text-align: center;
+}
+
+.form-group{
+  display: inline-block;
+}
+
+input{
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-bottom: 2px solid #FF9800;
 }
 
 

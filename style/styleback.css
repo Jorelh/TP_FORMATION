@@ -29,6 +29,7 @@ a:hover{
 ul{
   display: inline-table;
   font-family: 'Raleway', sans-serif;
+  padding: 0;
 }
 
 li{
