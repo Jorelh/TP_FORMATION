@@ -72,8 +72,11 @@
 // Note du film
 	// Aussi, la note sur 100 du film devrait s'afficher de manière graphique, en plus du chiffre. À vous de voir comment.
 
+
 //////////////////////// Bouton de notation
 // Il est maintenant temps de permettre à l'utilisateur (connecté) de donner une note à chacun des films.  Cette note doit être stockée en base de données sur 100, L'action se produit en ajax, bien sûr. Lorsqu'un film a déjà été noté, cette note doit s'afficher à la place du bouton.
+
+
 ////////////////////////  Page des films notés
 // Une nouvelle page doit permettre de voir les films notés par l'utilisateur. Les films doivent être présentés par ordre de date de la note, et un système de pagination doit donc nécessairement être mis en place.
 // Faire une jointure pour recuperer toutes les infos des films déjà notés
@@ -99,13 +102,19 @@
 // •	Colonnes à afficher : id, title, year, rating, actions
 // •	La colonne actions comportent 3 icônes : « voir sur le site », « modifier », « effacer »
 // •	Affichez 100 films par page, avec un système complet de pagination
+
+
 ///////////////////   Films | ajout et modification
 // En cliquant sur l'icône de modification, l'administrateur est amené sur la page de modification d'un film. Cette page comporte un formulaire complet permettant de modifier tous les champs de la base de données.
 // Ce même formulaire est utilisé sur la page d'ajout de film (page accessible par le menu principal).
 // Films | suppression
 //En cliquant sur l'icône de suppression, une fenêtre de confirmation demande à l'administrateur s'il souhaite réellement effacer ce film. Si oui, le film est effacé de la base de données.
+
+
 //////////////////////  Utilisateurs
 // Le principe est exactement le même pour les utilisateurs que pour les films, à la différence qu'il n'est pas possible d'ajouter manuellement des utilisateurs.
+
+
 ////////////////////////////  Statistiques
 // La page « statistiques » vous permet de voir en un coup d'oeil l'état du site. Elle ferait d'ailleurs une bonne page d'accueil pour le BO.
 /////Elle affiche les données suivantes :

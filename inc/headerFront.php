@@ -7,6 +7,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style/style.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Lora:700,400' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" href="style/app.js">
+
+    </script>
     <title>Flimflix</title>
   </head>
   <body>
@@ -21,12 +24,14 @@
       </ul>
 
       <ul class="navsearch">
-        <li>Recherche
-        <ul>
-          <li><a href="#">Titre</a></li>
-          <li><a href="#">Réalisateur</a></li>
-          <li><a href="#">Acteurs</a></li>
-        </ul></li>
+        <li><a href="#">Recherche</a>
+        <form class="dropdown">
+          <input type="text" name="search" placeholder="rechercher">
+          <input type="checkbox" name="Titre" checked="checked" value="Titre">Titre
+          <input type="checkbox" name="Realisateur" checked="checked" value="Réalisateur">Réalisateur
+          <input type="checkbox" name="Acteurs" checked="checked" value="Acteurs">Acteurs
+          <input type="submit" name="rechercher" value="Rechercher" class="button">
+        </form></li>
       </ul>
 
       <ul class="navright">
