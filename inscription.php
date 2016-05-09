@@ -109,38 +109,45 @@ if(!empty($_POST['submitinscription'])) {
 
 <?php include('inc/headerFront.php'); ?>
 
-	<h1>Inscription</h1>
+
 
 	<?php if($success) {
-		echo 'bravo!';
+		echo 'Bravo, vous êtes inscrit!';
 	} else { ?>
 
-		<form method="POST" action="inscription.php" id="forminscription">
-			<div class="form-group">
-				<label for="pseudo">Pseudo *</label>
-				<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
-				<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
-			</div>
+		<section class="wrapper">
 
-			<div class="form-group">
-				<label for="email">Email *</label>
-				<span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
-				<input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" />
-			</div>
+			<form method="POST" action="inscription.php" id="forminscription">
 
-			<div class="form-group">
-				<label for="password1">Mot de passe *</label>
-				<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
-				<input type="text" name="password1" id="password1" class="form-control" value="<?php if(!empty($_POST['password1'])) { echo $_POST['password1']; } ?>" />
-			</div>
+				<h1>Inscription</h1>
 
-			<div class="form-group">
-				<label for="password2">Repeter le mot de passe *</label>
-				<input type="text" name="password2" id="password2" class="form-control" value="<?php if(!empty($_POST['password2'])) { echo $_POST['password2']; } ?>" />
-			</div>
+				<div class="form-group">
+					<label for="pseudo">Pseudo *</label><br>
+					<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
+					<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
+				</div>
 
-			<input type="submit" name="submitinscription" value="Je m'inscris" class="btn btn-default" />
-		</form>
+				<div class="form-group">
+					<label for="email">Email *</label><br>
+					<span class="error"><?php if(!empty($errors['email'])) { echo $errors['email']; } ?></span>
+					<input type="email" name="email" id="email" class="form-control" value="<?php if(!empty($_POST['email'])) { echo $_POST['email']; } ?>" />
+				</div>
+
+				<div class="form-group">
+					<label for="password1">Mot de passe *</label><br>
+					<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
+					<input type="text" name="password1" id="password1" class="form-control" value="<?php if(!empty($_POST['password1'])) { echo $_POST['password1']; } ?>" />
+				</div>
+
+				<div class="form-group">
+					<label for="password2">Repeter le mot de passe *</label><br>
+					<input type="text" name="password2" id="password2" class="form-control" value="<?php if(!empty($_POST['password2'])) { echo $_POST['password2']; } ?>" />
+				</div>
+
+				<input type="submit" name="submitinscription" value="Je m'inscris" class="buttonsearch" />
+			</form>
+
+		</section>
 	<?php } ?>
 
 <?php include('inc/footerFront.php'); ?>

@@ -64,30 +64,34 @@ if(!empty($_POST['submitconnexion'])) {
 
 <?php include('inc/headerFront.php'); ?>
 
-	<h1>Connexion</h1>
+		<section class="wrapper">
 
+			<form method="POST" action="connexion.php" id="formconnexion">
 
-		<form method="POST" action="connexion.php" id="formconnexion">
-			<div class="form-group">
-				<label for="pseudo">Pseudo ou email *</label>
-				<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
-				<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
-			</div>
+				<h1>Connexion</h1>
 
-			<div class="form-group">
-				<label for="password">Mot de passe *</label>
-				<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
-				<input type="text" name="password" id="password" class="form-control" value="<?php if(!empty($_POST['password'])) { echo $_POST['password']; } ?>" />
-			</div>
+				<div class="form-group">
+					<label for="pseudo">Pseudo ou email *</label><br>
+					<span class="error"><?php if(!empty($errors['pseudo'])) { echo $errors['pseudo']; } ?></span>
+					<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?php if(!empty($_POST['pseudo'])) { echo $_POST['pseudo']; } ?>" />
+				</div>
 
-			<label>
-				<input type="checkbox" name="remember" /> Se souvenir de moi
+				<div class="form-group">
+					<label for="password">Mot de passe *</label><br>
+					<span class="error"><?php if(!empty($errors['password'])) { echo $errors['password']; } ?></span>
+					<input type="text" name="password" id="password" class="form-control" value="<?php if(!empty($_POST['password'])) { echo $_POST['password']; } ?>" />
+				</div>
 
-			</label>
-			<br>
-			<input type="submit" name="submitconnexion" value="Connexion" class="btn btn-default" />
-		</form>
-		<a href="passwordforget.php">Mot de passe perdu</a>
+				<input type="submit" name="submitconnexion" value="Connexion" class="buttonsearch"/><br>
+
+				<label><input type="checkbox" name="remember"/> Se souvenir de moi</label><br>
+
+				<a href="passwordforget.php">Mot de passe perdu ?</a>
+
+			</form>
+
+		</section>
+
 
 
 <?php include('inc/footerFront.php'); ?>

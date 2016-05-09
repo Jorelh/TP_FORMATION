@@ -32,7 +32,7 @@ foreach ($movies as $movie) {
 
 ?>
 
-<a href="#"><button type="button" name="button">Voir plus de flims</button></a>
+<a href="index.php"><button class="buttonbig" type="button" name="button">Voir d'autres flims</button></a>
 
 </section>
 

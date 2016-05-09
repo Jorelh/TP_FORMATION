@@ -9,7 +9,7 @@ $filename = 'posters/' . $_GET['id']. '.jpg';
 
 //movie details table
 if(!empty($_GET["id"])){
-	$movieId = $_GET["id"];
+	$movieId = trim(strip_tags($_GET["id"]));
 	$movieDetails = getMovie($movieId);
 }else{
 
