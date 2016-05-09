@@ -10,7 +10,7 @@ h1, h2, h3, h4{
   margin: 0;
 }
 
-p, label{
+p, label, form{
   color: #FF9800;
   font-family: 'Raleway', sans-serif;
 }
@@ -41,10 +41,18 @@ li{
 
 button{
   padding: 1em 2.5em;
+  margin: 20px;
+  width: 1130px;
   font-size: 1em;
   background: #FF9800;
   border-radius: 3px;
   border: none;
+
+  transition: .3s;
+}
+
+button:hover{
+  background: white;
 }
 
 /* Header + Menu */
@@ -64,7 +72,11 @@ header h1{
 }
 
 .navsearch{
-  visibility: hidden;
+  color: #FF9800;
+}
+
+.dropdown{
+  
 }
 
 
@@ -91,6 +103,7 @@ header h1{
 
 .thumbnail p{
   text-align: center;
+  width: 220px;
 }
 
 
