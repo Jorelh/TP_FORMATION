@@ -5,10 +5,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" href="js/jquery.js"></script>
-    <script type="text/javascript" href="js/app.js"></script>
     <link rel="stylesheet" href="style/style.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Lora:700,400' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <title>Flimflix</title>
   </head>
   <body>
