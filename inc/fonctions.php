@@ -13,8 +13,8 @@ function getImage($table, $id, $file){
 	if(!empty($table)){
 		if($table['id'] == $id){
 			
-			$nk = '<div><img src="'. $file.'"></div>';
-			return  $nk;
+			$img = '<div><img src="'. $file.'"></div>';
+			return  $img;
 		}
 	}
 }
