@@ -25,43 +25,44 @@ if(!empty($_GET['addMovieId'])){
 
 debug($json);
 
-$addMovie = new addMovie(array(
+$addMovie = new addMovie($data = array(
 
 	'slug' => '' ,
-	'title' => '' , 
-	'year' => '' , 
-	'genres' => '' , 
-	'plot' => '' , 
-	'directors' => '' , 
-	'cast' => '' , 
-	'writers' => '' , 
-	'runtime' => '' , 
-	'mpaa' => '' , 
-	'rating' => '' , 
-	'popularity' => '' , 
-	'modified' => '' , 
-	'created' => '' , 
-	'poster_flag' => ''  
+	'title' => $json['Title'] , 
+	'year' => $json['Year'], 
+	'genres' => $json['Genre'], 
+	'plot' => $json['Plot'], 
+	'directors' => $json['Director'], 
+	'cast' => $json['Actors'] , 
+	'writers' => $json['Writer'] , 
+	'runtime' => $json['Runtime'] , 
+	'mpaa' => $json['Rated'] , 
+	'rating' => $json['Metascore'] , 
+	'popularity' => $json['imdbRating'] , 
+	'modified' => date('Y-m-d H:m:s'), 
+	'created' => date('Y-m-d H:m:s'), 
+	'poster_flag' => '0'  
 
 	));
 
 debug($addMovie);
 
-	echo $addMovie -> input('slug');
-	echo $addMovie -> input('title');
-	echo $addMovie -> input('year');
-	echo $addMovie -> input('genres');
-	echo $addMovie -> input('plot');
-	echo $addMovie -> input('directors');
-	echo $addMovie -> input('cast');
-	echo $addMovie -> input('writers');
-	echo $addMovie -> input('runtime');
-	echo $addMovie -> input('mpaa');
-	echo $addMovie -> input('rating');
-	echo $addMovie -> input('popularity');
-	echo $addMovie -> input('modified');
-	echo $addMovie -> input('created');
-	echo $addMovie -> input('poster_flag');
+	echo $addMovie -> input('slug', '');
+	echo $addMovie -> input('title', $json['Title']);
+	echo $addMovie -> input('year', $json['Year']);
+	echo $addMovie -> input('genre', $json['Genre']);
+	echo $addMovie -> input('plopt', $json['Plot']);
+	echo $addMovie -> input('director', $json['Director']);
+	echo $addMovie -> input('cast', $json['Actors']);
+	echo $addMovie -> input('writers', $json['Writer']);
+	echo $addMovie -> input('runtime', $json['Runtime']);
+	echo $addMovie -> input('mpaa', $json['Rated']);
+	echo $addMovie -> input('rating', $json['Metascore']);
+	echo $addMovie -> input('popularity', $json['imdbRating']);
+	echo $addMovie -> input('created', date('Y-m-d H:m:s'));
+	echo $addMovie -> input('modified', date('Y-m-d H:m:s'));
+	echo $addMovie -> input('flag','0');
+	
 	echo $addMovie -> submit();
 }else{ ?>
 
