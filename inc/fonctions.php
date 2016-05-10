@@ -12,8 +12,8 @@ function debug($tab){
 function getImage($table, $id, $file){
 	if(!empty($table)){
 		if($table['id'] == $id){
-			
-			$img = '<div><img src="'.$file.'"></div>';
+
+			$img = '<div class="imgDetail"><img src="'.$file.'"></div>';
 			return  $img;
 		}
 	}
@@ -24,7 +24,7 @@ function getImage($table, $id, $file){
 function getTitle($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$title = '<div><h3>'.$table['title'].'</h3></div>';
+			$title = '<div><h2>'.$table['title'].'</h2></div>';
 			return $title;
 		}
 	}
@@ -33,7 +33,7 @@ function getTitle($table, $id){
 function getPlot($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$plot = '<div><p>'.$table['plot'].'</p></div>';
+			$plot = '<div><h3>Scenario: </h3><p>'.$table['plot'].'</p></div>';
 			return $plot;
 		}
 	}
@@ -42,7 +42,7 @@ function getPlot($table, $id){
 function getYear($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$year = '<div><p>'.$table['year'].'</p></div>';
+			$year = '<div><h3>Année: </h3><p>'.$table['year'].'</p></div>';
 			return $year;
 		}
 	}
@@ -51,7 +51,7 @@ function getYear($table, $id){
 function getGenres($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$genres = '<div><p>'.$table['genres'].'</p></div>';
+			$genres = '<div><h3>Genre: </h3><p>'.$table['genres'].'</p></div>';
 			return $genres;
 		}
 	}
@@ -69,7 +69,7 @@ function getDirectors($table, $id){
 function getCast($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$cast = '<div><p>'.$table['cast'].'</p></div>';
+			$cast = '<div><h3>Casting: </h3><p>'.$table['cast'].'</p></div>';
 			return $cast;
 		}
 	}
@@ -78,7 +78,7 @@ function getCast($table, $id){
 function getWriters($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$writers = '<div><p>'.$table['writers'].'</p></div>';
+			$writers = '<div><h3>Directeur: </h3><p>'.$table['writers'].'</p></div>';
 			return $writers;
 		}
 	}
@@ -87,7 +87,7 @@ function getWriters($table, $id){
 function getRating($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$rating = '<div><p>'.$table['rating'].'</p></div>';
+			$rating = '<div><h3>Note: </h3><p>'.$table['rating'].'</p></div>';
 			return $rating;
 		}
 	}
@@ -96,7 +96,7 @@ function getRating($table, $id){
 function getPopularity($table, $id){
 	if(!empty($table)){
 		if(!empty($table['id'] == $id)){
-			$popularity = '<div><p>'.$table['popularity'].'</p></div>';
+			$popularity = '<div><h3>Popularité: </h3><p>'.$table['popularity'].'</p></div>';
 			return $popularity;
 		}
 	}
@@ -113,7 +113,7 @@ function slugify($text){
   // transliterate
   $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
 
-  // supprime les caractères indésirables 
+  // supprime les caractères indésirables
   $text = preg_replace('~[^-\w]+~', '', $text);
 
   // trim
@@ -134,4 +134,3 @@ function slugify($text){
   return $text;
   }
 }
-

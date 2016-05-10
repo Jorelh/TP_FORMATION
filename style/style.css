@@ -61,6 +61,7 @@ li{
   background: white;
 }
 
+
 /* Header + Menu */
 
 header{
@@ -91,11 +92,6 @@ header h1{
 
 .hide{
   display: none;
-  transition: .3s;
-}
-
-.open{
-
 }
 
 .buttonsearch{
@@ -108,8 +104,6 @@ header h1{
   box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
-
-  transition: .3s;
 }
 
 .buttonsearch:hover{
@@ -118,6 +112,15 @@ header h1{
 }
 
 .dropdown{
+  transition: all 0.5s ease;
+}
+
+/* Menu déroulant dans la recherche */
+.annee{
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: .2em;
 }
 
 
@@ -145,6 +148,31 @@ header h1{
 .thumbnail p{
   text-align: center;
   width: 220px;
+}
+
+
+/* Page de détails */
+
+.title{
+  margin: 2em;
+  text-align: center;
+  color: #FF9800;
+}
+.title h2{ font-size: 2em;}
+.title p{ color: #FF9800; }
+
+.imgDetails{
+  display: flex;
+}
+
+.mainContainerDetails {
+  display: flex;
+  flex-direction: column;
+  background: #263248;
+}
+
+.mainContainerDetails h3, p{
+  color: white;
 }
 
 
