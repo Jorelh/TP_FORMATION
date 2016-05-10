@@ -50,16 +50,11 @@
 
                   <input type="checkbox" name="category" value="category">Catégories <br>
                   <input type="checkbox" name="actor" value="actor">Acteur <br>
-                  <input type="checkbox" name="director" value="director">Réalisateur <br>
-<<<<<<< HEAD
-
+                  <input type="checkbox" name="director" value="director">Réalisateur <br>  
                   <input type="checkbox" name="selectAll">Tout séléctionner <br>
 
-                  <select name="Annee" class="annee">
-=======
                   <label for="">Années : </label>
-                  <select name="Annee">
->>>>>>> origin/master
+                  <select name="Annee" class="annee">
                     <?php
                     echo $form->select('avant 1920');
                     echo $form->select('1920 à 1930');
