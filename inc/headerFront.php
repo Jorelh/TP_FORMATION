@@ -1,5 +1,6 @@
 <?php // headerFront.php
-  require 'test/form.php';
+  require 'inc/form.php';
+  include 'inc/db.php';
 
   //On définit $form comme étant un nouveau formulaire
   $form = new form($_POST);
