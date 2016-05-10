@@ -91,6 +91,7 @@ header h1{
 
 .hide{
   display: none;
+  transition: .3s;
 }
 
 .open{
@@ -114,6 +115,9 @@ header h1{
 .buttonsearch:hover{
   background: white;
   cursor: pointer;
+}
+
+.dropdown{
 }
 
 
