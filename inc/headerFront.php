@@ -54,6 +54,7 @@
                   <input type="checkbox" name="category" value="category">Catégories <br>
                   <input type="checkbox" name="actor" value="actor">Acteur <br>
                   <input type="checkbox" name="director" value="director">Réalisateur <br>
+                  <label for="">Années : </label>
                   <select name="Annee">
                     <?php
                     echo $form->select('avant 1920');
@@ -67,6 +68,20 @@
                     echo $form->select('1990 à 2000');
                     echo $form->select('2000 à 2010');
                     echo $form->select('après 2010');
+                    ?>
+                  </select>
+                  <label for="">Popularité : </label>
+                  <select name="Populatite">
+                    <?php
+                    echo $form->select('0 à 10');
+                    echo $form->select('10 à 20');
+                    echo $form->select('20 à 30');
+                    echo $form->select('40 à 50');
+                    echo $form->select('50 à 60');
+                    echo $form->select('60 à 70');
+                    echo $form->select('70 à 80');
+                    echo $form->select('80 à 90');
+                    echo $form->select('90 à 100');
                     ?>
                   </select>
                   <input type="submit" name="rechercher" value="Go!" class="buttonsearch">

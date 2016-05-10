@@ -27,7 +27,7 @@ class form{
   }
 
   public function checkbox($name){
-    return '<input name="'. $name .'" checked="checked" value="'. $name .'" type="checkbox">'. $name;
+    return '<input name="'. $name .'" checked="checked" value="'. $name .'" type="checkbox">'. $name . '<br>  ';
   }
 
   public function select($name){
