@@ -12,8 +12,7 @@ function debug($tab){
 function getImage($table, $id, $file){
 	if(!empty($table)){
 		if($table['id'] == $id){
-
-			$img = '<div class="imgDetail"><img src="'.$file.'"></div>';
+			$img = '<div class="imgBackground" id="imgDiv"><img class="imgDetail" src="'.$file.'"></div>';
 			return  $img;
 		}
 	}

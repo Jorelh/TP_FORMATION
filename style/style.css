@@ -161,6 +161,8 @@ header h1{
 .title h2{ font-size: 2em;}
 .title p{ color: #FF9800; }
 
+
+/*
 .imgDetails{
   display: flex;
 }
@@ -170,10 +172,29 @@ header h1{
   flex-direction: column;
   background: #263248;
 }
+*/
+
 
 .mainContainerDetails h3, p{
   color: white;
 }
+
+/* This is our container */
+.imgDetail {
+  position: relative;
+  width: 100%;
+  padding: 2em 0;
+}
+  /* This is our canvas */
+  .imgBackground {
+    /* This stretches the canvas across the entire hero unit */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 
 
 /* Formulaires de connexion et inscription */
